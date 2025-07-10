@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Carlos Gutiérrez - Programador Junior Full Stack</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#3b82f6',secondary:'#1e40af'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        html { scroll-behavior: smooth; }
+        .hero-bg {
+            background-image: url('https://readdy.ai/api/search-image?query=Modern%20minimalist%20workspace%20with%20clean%20desk%20setup%2C%20laptop%2C%20notebook%2C%20and%20soft%20natural%20lighting%20from%20window%2C%20professional%20coding%20environment%20with%20blue%20and%20white%20color%20scheme%2C%20contemporary%20office%20interior%20design%2C%20high-tech%20atmosphere%2C%20clean%20aesthetic%2C%20productivity%20focused%20space&width=1920&height=1080&seq=hero-bg&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-primary">JCG</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#inicio" class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">Inicio</a>
+                        <a href="#sobre-mi" class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">Sobre Mí</a>
+                        <a href="#proyectos" class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">Proyectos</a>
+                        <a href="#habilidades" class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">Habilidades</a>
+                        <a href="#contacto" class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">Contacto</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-primary">
+                        <div class="w-6 h-6 flex items-center justify-center">
+                            <i class="ri-menu-line ri-lg"></i>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#inicio" class="block px-3 py-2 text-gray-700 hover:text-primary">Inicio</a>
+                <a href="#sobre-mi" class="block px-3 py-2 text-gray-700 hover:text-primary">Sobre Mí</a>
+                <a href="#proyectos" class="block px-3 py-2 text-gray-700 hover:text-primary">Proyectos</a>
+                <a href="#habilidades" class="block px-3 py-2 text-gray-700 hover:text-primary">Habilidades</a>
+                <a href="#contacto" class="block px-3 py-2 text-gray-700 hover:text-primary">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="inicio" class="hero-bg min-h-screen flex items-center relative">
+        <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-transparent"></div>
+        <div class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center justify-between">
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <div class="mb-8">
+                        <img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20portrait%20of%20young%20hispanic%20male%20software%20developer%2C%20clean%20background%2C%20confident%20smile%2C%20modern%20business%20casual%20attire%2C%20professional%20lighting%2C%20high%20quality%20corporate%20photography%20style&width=300&height=300&seq=profile-pic&orientation=squarish" alt="Juan Carlos Gutiérrez" class="w-32 h-32 rounded-full mx-auto lg:mx-0 mb-6 object-cover shadow-lg">
+                    </div>
+                    <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
+                        Juan Carlos <span class="text-primary">Gutiérrez</span>
+                    </h1>
+                    <h2 class="text-2xl lg:text-3xl text-gray-700 mb-6 font-medium">
+                        Programador Junior Full Stack
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8 max-w-2xl">
+                        Especializado en React, Next.js y tecnologías modernas. Apasionado por crear soluciones innovadoras y trabajar en equipos colaborativos con metodologías ágiles.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+                        <button class="bg-primary hover:bg-secondary text-white px-8 py-3 !rounded-button font-semibold transition-all duration-200 transform hover:scale-105 whitespace-nowrap">
+                            Ver Proyectos
+                        </button>
+                        <button class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 !rounded-button font-semibold transition-all duration-200 whitespace-nowrap">
+                            Descargar CV
+                        </button>
+                    </div>
+                    <div class="flex justify-center lg:justify-start space-x-4">
+                        <a href="https://www.linkedin.com/in/juan-carlos-guti%C3%A9rrez-6a7305374/" target="_blank" class="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-md hover:shadow-lg transition-all duration-200 hover:scale-110">
+                            <i class="ri-linkedin-fill text-primary ri-lg"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-md hover:shadow-lg transition-all duration-200 hover:scale-110">
+                            <i class="ri-github-fill text-gray-700 ri-lg"></i>
+                        </a>
+                        <a href="mailto:juan.gutierrez@email.com" class="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-md hover:shadow-lg transition-all duration-200 hover:scale-110">
+                            <i class="ri-mail-fill text-gray-700 ri-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-mi" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Sobre Mí</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Mi Historia</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Soy un programador junior apasionado por el desarrollo web moderno, con sólidos conocimientos en React, Next.js, MongoDB, Tailwind CSS, JavaScript y TypeScript. Mi formación en <strong class="text-primary">RACKS ACADEMY</strong> me ha proporcionado las bases técnicas y metodológicas necesarias para destacar en el desarrollo de aplicaciones web.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Me caracterizo por mi capacidad para trabajar en equipo, aprender con rapidez y aportar soluciones innovadoras en entornos colaborativos. Tengo experiencia práctica con metodologías ágiles y un enfoque orientado a resultados que me permite adaptarme rápidamente a nuevos desafíos.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Mi objetivo es continuar creciendo profesionalmente mientras contribuyo al éxito de proyectos que generen impacto positivo, aplicando las mejores prácticas de desarrollo y manteniendo siempre una actitud proactiva hacia el aprendizaje continuo.
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full">
+                            <i class="ri-graduation-cap-fill text-primary ri-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Formación en RACKS ACADEMY</h4>
+                            <p class="text-gray-600">Desarrollo Full Stack Moderno</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://readdy.ai/api/search-image?query=Modern%20software%20developer%20working%20on%20laptop%20in%20bright%20office%20space%2C%20focused%20on%20coding%2C%20multiple%20monitors%20setup%2C%20clean%20workspace%20with%20plants%2C%20natural%20lighting%2C%20professional%20development%20environment%2C%20contemporary%20office%20design&width=600&height=400&seq=about-image&orientation=landscape" alt="Desarrollador trabajando" class="rounded-lg shadow-xl object-cover w-full h-96">
+                    <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-lg shadow-lg">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary">2+</div>
+                            <div class="text-sm text-gray-600">Años de Experiencia</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="habilidades" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Habilidades Técnicas</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Tecnologías y herramientas que domino para crear aplicaciones web modernas y eficientes</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
+                    <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-lg mb-6 mx-auto">
+                        <i class="ri-reactjs-line text-blue-600 ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 text-center mb-4">React</h3>
+                    <p class="text-gray-600 text-center">Desarrollo de interfaces de usuario interactivas y componentes reutilizables</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
+                    <div class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-lg mb-6 mx-auto">
+                        <i class="ri-nextjs-line text-gray-800 ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 text-center mb-4">Next.js</h3>
+                    <p class="text-gray-600 text-center">Framework de React para aplicaciones web con renderizado del lado del servidor</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
+                    <div class="w-16 h-16 flex items-center justify-center bg-green-100 rounded-lg mb-6 mx-auto">
+                        <i class="ri-database-2-line text-green-600 ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 text-center mb-4">MongoDB</h3>
+                    <p class="text-gray-600 text-center">Base de datos NoSQL para aplicaciones escalables y flexibles</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
+                    <div class="w-16 h-16 flex items-center justify-center bg-cyan-100 rounded-lg mb-6 mx-auto">
+                        <i class="ri-css3-line text-cyan-600 ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 text-center mb-4">Tailwind CSS</h3>
+                    <p class="text-gray-600 text-center">Framework CSS utilitario para diseños rápidos y responsivos</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
+                    <div class="w-16 h-16 flex items-center justify-center bg-yellow-100 rounded-lg mb-6 mx-auto">
+                        <i class="ri-javascript-line text-yellow-600 ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 text-center mb-4">JavaScript</h3>
+                    <p class="text-gray-600 text-center">Lenguaje de programación fundamental para desarrollo web dinámico</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
+                    <div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-lg mb-6 mx-auto">
+                        <i class="ri-code-s-slash-line text-blue-600 ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 text-center mb-4">TypeScript</h3>
+                    <p class="text-gray-600 text-center">JavaScript tipado para aplicaciones más robustas y mantenibles</p>
+                </div>
+            </div>
+            <div class="mt-16 bg-white rounded-lg shadow-md p-8">
+                <h3 class="text-2xl font-semibold text-gray-900 text-center mb-8">Metodologías y Herramientas</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mx-auto mb-4">
+                            <i class="ri-team-line text-primary ri-lg"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Metodologías Ágiles</h4>
+                        <p class="text-gray-600 text-sm">Scrum, Kanban, trabajo colaborativo</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mx-auto mb-4">
+                            <i class="ri-git-branch-line text-primary ri-lg"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Control de Versiones</h4>
+                        <p class="text-gray-600 text-sm">Git, GitHub, flujos de trabajo</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mx-auto mb-4">
+                            <i class="ri-smartphone-line text-primary ri-lg"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Diseño Responsivo</h4>
+                        <p class="text-gray-600 text-sm">Mobile-first, UX/UI principles</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Mis Proyectos</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Una selección de proyectos que demuestran mis habilidades técnicas y creatividad</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Modern%20e-commerce%20web%20application%20interface%20showing%20clean%20product%20catalog%20with%20shopping%20cart%2C%20responsive%20design%2C%20contemporary%20UI%20elements%2C%20professional%20web%20development%20project%2C%20React%20application%20screenshot&width=400&height=250&seq=project-1&orientation=landscape" alt="E-commerce App" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="flex space-x-4">
+                                <button class="bg-white text-primary px-4 py-2 !rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap">
+                                    <div class="w-4 h-4 flex items-center justify-center mr-2 inline-block">
+                                        <i class="ri-external-link-line"></i>
+                                    </div>
+                                    Demo
+                                </button>
+                                <button class="bg-white text-primary px-4 py-2 !rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap">
+                                    <div class="w-4 h-4 flex items-center justify-center mr-2 inline-block">
+                                        <i class="ri-github-line"></i>
+                                    </div>
+                                    Código
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">E-commerce Platform</h3>
+                        <p class="text-gray-600 mb-4">Plataforma de comercio electrónico completa con carrito de compras, gestión de productos y sistema de pagos integrado.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">React</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 text-xs rounded-full">Next.js</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 text-xs rounded-full">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Task%20management%20dashboard%20web%20application%20with%20kanban%20board%20layout%2C%20project%20tracking%20interface%2C%20modern%20UI%20design%2C%20productivity%20app%20screenshot%2C%20clean%20interface%20with%20cards%20and%20columns&width=400&height=250&seq=project-2&orientation=landscape" alt="Task Manager" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="flex space-x-4">
+                                <button class="bg-white text-primary px-4 py-2 !rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap">
+                                    <div class="w-4 h-4 flex items-center justify-center mr-2 inline-block">
+                                        <i class="ri-external-link-line"></i>
+                                    </div>
+                                    Demo
+                                </button>
+                                <button class="bg-white text-primary px-4 py-2 !rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap">
+                                    <div class="w-4 h-4 flex items-center justify-center mr-2 inline-block">
+                                        <i class="ri-github-line"></i>
+                                    </div>
+                                    Código
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Task Manager Pro</h3>
+                        <p class="text-gray-600 mb-4">Aplicación de gestión de tareas con tablero Kanban, colaboración en tiempo real y seguimiento de productividad.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">React</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs rounded-full">TypeScript</span>
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-800 text-xs rounded-full">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Weather%20forecast%20web%20application%20interface%20showing%20current%20weather%20conditions%2C%207-day%20forecast%2C%20location%20search%2C%20modern%20weather%20app%20design%20with%20icons%20and%20charts%2C%20responsive%20mobile-first%20design&width=400&height=250&seq=project-3&orientation=landscape" alt="Weather App" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="flex space-x-4">
+                                <button class="bg-white text-primary px-4 py-2 !rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap">
+                                    <div class="w-4 h-4 flex items-center justify-center mr-2 inline-block">
+                                        <i class="ri-external-link-line"></i>
+                                    </div>
+                                    Demo
+                                </button>
+                                <button class="bg-white text-primary px-4 py-2 !rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap">
+                                    <div class="w-4 h-4 flex items-center justify-center mr-2 inline-block">
+                                        <i class="ri-github-line"></i>
+                                    </div>
+                                    Código
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Weather Forecast App</h3>
+                        <p class="text-gray-600 mb-4">Aplicación del clima con pronóstico extendido, geolocalización y visualización de datos meteorológicos interactiva.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full">JavaScript</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">React</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-800 text-xs rounded-full">API Integration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Mi Formación</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full mr-6">
+                            <i class="ri-graduation-cap-fill text-primary ri-2x"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900">RACKS ACADEMY</h3>
+                            <p class="text-gray-600">Desarrollo Full Stack Moderno</p>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-900 mb-4">Tecnologías Aprendidas</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-center">
+                                    <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                                    React.js y Ecosystem
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                                    Next.js Framework
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                                    MongoDB y Bases de Datos
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                                    JavaScript Avanzado
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                                    TypeScript
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-900 mb-4">Metodologías y Prácticas</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-center">
+                                    <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                                    Metodologías Ágiles
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                                    Trabajo en Equipo
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                                    Clean Code
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                                    Testing y Debugging
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                                    Deployment y DevOps
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Contacto</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">¿Tienes un proyecto en mente? Me encantaría escuchar sobre él y ver cómo puedo ayudarte</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Información de Contacto</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+                                <i class="ri-mail-line text-primary ri-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Email</h4>
+                                <p class="text-gray-600">juan.gutierrez@email.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+                                <i class="ri-linkedin-line text-primary ri-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/juan-carlos-guti%C3%A9rrez-6a7305374/" target="_blank" class="text-primary hover:text-secondary transition-colors">Ver perfil profesional</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+                                <i class="ri-map-pin-line text-primary ri-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Ubicación</h4>
+                                <p class="text-gray-600">España</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <button class="bg-primary hover:bg-secondary text-white px-8 py-3 !rounded-button font-semibold transition-all duration-200 transform hover:scale-105 whitespace-nowrap">
+                            Descargar CV
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Nombre</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-sm" placeholder="Tu nombre completo">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-sm" placeholder="tu@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Asunto</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-sm" placeholder="Asunto del mensaje">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Mensaje</label>
+                            <textarea rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none text-sm" placeholder="Cuéntame sobre tu proyecto..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary hover:bg-secondary text-white py-3 !rounded-button font-semibold transition-all duration-200 whitespace-nowrap">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Juan Carlos Gutiérrez</h3>
+                    <p class="text-gray-400 mb-4">Programador Junior Full Stack especializado en tecnologías modernas de desarrollo web.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/juan-carlos-guti%C3%A9rrez-6a7305374/" target="_blank" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-github-fill"></i>
+                        </a>
+                        <a href="mailto:juan.gutierrez@email.com" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-mail-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#inicio" class="hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="#sobre-mi" class="hover:text-white transition-colors">Sobre Mí</a></li>
+                        <li><a href="#proyectos" class="hover:text-white transition-colors">Proyectos</a></li>
+                        <li><a href="#habilidades" class="hover:text-white transition-colors">Habilidades</a></li>
+                        <li><a href="#contacto" class="hover:text-white transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>juan.gutierrez@email.com</li>
+                        <li>España</li>
+                        <li>Disponible para proyectos</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">&copy; 2025 Juan Carlos Gutiérrez. Todos los derechos reservados.</p>
+                <button id="scroll-to-top" class="mt-4 md:mt-0 bg-primary hover:bg-secondary px-4 py-2 !rounded-button transition-colors whitespace-nowrap">
+                    <div class="w-4 h-4 flex items-center justify-center mr-2 inline-block">
+                        <i class="ri-arrow-up-line"></i>
+                    </div>
+                    Volver arriba
+                </button>
+            </div>
+        </div>
+    </footer>
+    <script id="mobile-menu-script">
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+
+    <script id="smooth-scroll-script">
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        const offsetTop = targetElement.offsetTop - 80;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script id="scroll-to-top-script">
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollToTopButton = document.getElementById('scroll-to-top');
+            
+            scrollToTopButton.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <script id="hero-cta-script">
+        document.addEventListener('DOMContentLoaded', function() {
+            const verProyectosBtn = document.querySelector('button:contains("Ver Proyectos")');
+            if (verProyectosBtn) {
+                verProyectosBtn.addEventListener('click', function() {
+                    const proyectosSection = document.getElementById('proyectos');
+                    if (proyectosSection) {
+                        const offsetTop = proyectosSection.offsetTop - 80;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
